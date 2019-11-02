@@ -1,0 +1,21 @@
+body {
+  background-color:#797D84;
+  color: white;
+  margin: 5% 10% 0px 10%;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: white;
+  background-image: linear-gradient(to right, #ccc, #eee, #ccc);
+}
+
+.header {
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 5%;
+}
+
+.blurb {
+  font-family: 'Cormorant Garamond', serif;
+}
