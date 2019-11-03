@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <header>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|EB+Garamond&display=swap" rel="stylesheet">  <body>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+  <head>
+  <body>
     <div class="header">
-      <h3>Jeremy Corren</h3>
+      <h4 class="title">
+        <a href="#" id="about-link">Jeremy Corren</a>
+      </h4>
       <hr>
-      <h5>Pianist and Composer</h5>
     </div>
-    <div class="blurb">
-      <p>Content coming soon!</p>
+    <div class="links">
+      <div>
+        <a href="#" id="music-link">Music</a>
+      </div>
+      <div>
+        <a href="#" id="contact-link">Contact</a>
+      </div>
     </div>
+    <div class="content" id="about-content">
+      Pianist and composer based in New York.
+    </div>
+    <div class="content" id="music-content">
+      Coming soon.
+    </div>
+    <div class="content" id="contact-content">
+      Get in touch via <a href="mailto:jeremycorrenmusic@gmail.com" target="_top">email</a>
+      or <a href="https://www.instagram.com/jeremycorrenmusic/">Instagram</a>.
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
