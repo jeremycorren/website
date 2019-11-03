@@ -18,16 +18,17 @@ hr {
 }
 
 a {
-  font-weight: bolder;
-  color: black;
+  font-weight: bold;
+  color: rgb(94, 94, 94);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(134, 134, 134);
+  color: rgb(172, 172, 172);
   text-decoration: none;
 }
 
 .content {
   display: none;
+  font-size: 1.25em;
 }
