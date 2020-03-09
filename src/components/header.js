@@ -1,32 +1,33 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+  <header>
+    <div style={{margin: `0 auto`}}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Navbar>
+        <Navbar.Brand>
+          <Link
+            className="title"
+            to="/"
+            style={{
+              color: `black`,
+              textDecoration: `none`,
+              letterSpacing: `3px`
+            }}
+          >
+            {siteTitle.toUpperCase()}
+          </Link>
+        </Navbar.Brand>
+      </Navbar>
+      <hr />
+      <div className="subtitle" style={{
+        marginLeft: `1rem`,
+        marginTop: `0.3rem`
+      }}>Pianist • Composer</div>
     </div>
   </header>
 )
