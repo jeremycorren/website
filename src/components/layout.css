@@ -14,8 +14,17 @@ a:hover {
   color: #d1d1d1;
 }
 
-ul {
-  list-style-type: none;
+iframe {
+  border: 0;
+  width: 18rem;
+  height: 18rem;
+}
+
+@media only screen and (max-width: 700px) {
+  iframe {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 
 .inner {
@@ -28,10 +37,6 @@ ul {
 
 .content {
   font-family: 'Source Sans Pro';
-}
-
-.blurb {
-  font-family: 'Playfair Display';
 }
 
 .fade-in {
