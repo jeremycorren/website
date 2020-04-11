@@ -11,7 +11,7 @@ const IndexPage = () => (
         Bandcamp
       </a>
       <br/>
-      <a href="https://instagram.com/jeremycorrenmusic">
+      <a href="https://instagram.com/jeremy.corren/">
         Instagram
       </a>
       <br/>
