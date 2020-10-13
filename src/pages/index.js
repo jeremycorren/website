@@ -1,34 +1,32 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+export const query = graphql`
+  query {
+    fileName: file(relativePath: { eq: "portrait.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }`
+
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <div className="content">
-      <a href="https://jeremycorren.bandcamp.com/">
-        Bandcamp
-      </a>
+      <Img fluid={data.fileName.childImageSharp.fluid} alt="" />
       <br/>
-      <a href="https://instagram.com/jeremycorrenmusic">
-        Instagram
-      </a>
-      <br/>
-      <a href="mailto:contact@jeremycorrenmusic.com">
-        Email
-      </a>
+      <p>
+      Jeremy Corren is a pianist and composer based in New York. You can hear recent pieces for solo piano and trio on the EP <a href="https://jeremycorren.bandcamp.com/album/country-of-clouds" target="_blank" rel="noopener noreferrer">Country of Clouds</a>. Look out for his playing on the upcoming Blue Note release by Joel Ross, <a href="https://store.bluenote.com/products/joel-ross-who-are-you" target="_blank" rel="noopener noreferrer">Who Are You?</a>, this November.
+      </p>
     </div>
     <br />
   </Layout>
 )
 
 export default IndexPage
-
-/*
-<br/>
-    <div className="content">
-      <p>&#9654; Listen</p>
-      <iframe src="https://bandcamp.com/EmbeddedPlayer/album=3611770562/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="http://jeremycorren.bandcamp.com/album/solo-3">Solo by Jeremy Corren</a></iframe>
-    </div>
-*/

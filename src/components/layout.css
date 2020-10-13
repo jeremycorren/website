@@ -1,17 +1,21 @@
 hr {
   border: 1px solid;
-  width: 7.5rem;
+  width: 15rem;
   margin: 0px;
   margin-left: 1rem;
 }
 
 a {
-  color: #a1a1a1;
+  color: #808080;
   text-decoration: none !important;
 }
 
+p a {
+  font-weight: bold;
+}
+
 a:hover {
-  color: #d1d1d1;
+  color: #b3b3b3;
 }
 
 iframe {
@@ -28,7 +32,7 @@ iframe {
 }
 
 .inner {
-  margin: 5rem;
+  margin: 2.5rem;
 }
 
 .title, .subtitle {
@@ -37,6 +41,10 @@ iframe {
 
 .content {
   font-family: 'Source Sans Pro';
+}
+
+.about {
+  max-width: 40rem;
 }
 
 .fade-in {

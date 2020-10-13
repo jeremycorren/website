@@ -27,7 +27,12 @@ const Header = ({ siteTitle }) => (
       <div className="subtitle" style={{
         marginLeft: `1rem`,
         marginTop: `0.3rem`
-      }}>Pianist • Composer</div>
+      }}>
+        <Link to="/about">About</Link> • 
+        <a href="https://jeremycorren.bandcamp.com/album/country-of-clouds" target="_blank" rel="noopener noreferrer">Music</a> • 
+        <a href="https://instagram.com/jeremy.corren" target="_blank" rel="noopener noreferrer">Instagram</a> • 
+        <a href="mailto:contact@jeremycorrenmusic.com">Email</a>
+      </div>
     </div>
   </header>
 )
