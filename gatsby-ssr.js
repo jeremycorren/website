@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+import AnimMain from "./src/components/AnimMain/AnimMain"
+import { MenuProvider } from "./src/components/MenuContext"
+import { AnimatePresence } from "framer-motion"
 
-// You can delete this file if you're not using it
+export function wrapPageElement({ element }) {
+  return <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>
+}
+
+export function wrapRootElement({ element }) {
+  return <MenuProvider>{element}</MenuProvider>
+}

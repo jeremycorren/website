@@ -1,62 +1,90 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  Barcadia Starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Barcadia is a GatsbyJS starter theme that uses Contentful for content management. It includes the main configuration files found in Gatsby.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
-
-## 🚀 Quick start
+## Getting started
 
 1.  **Create a Gatsby site.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+    Use the Gatsby CLI to create a new site, specifying the Barcadia starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new Gatsby site using the barcadia starter
+    gatsby new my-barcadia-starter https://github.com/bagseye/barcadia
     ```
 
-1.  **Start developing.**
+2.  **Before running Gatsby Develop**
+
+    You'll need to setup a free account with Contentful [Here](https://www.contentful.com/) and create a space ID and access token for your new site.
+
+    Once these are generated create a new file in the site root called `.env.development` and populate it with the following information:
+
+    ```
+    CONTENTFUL_SPACE_ID={YOUR SPACE ID}
+    CONTENTFUL_ACCESS_TOKEN={YOUR ACCESS TOKEN}
+    ```
+
+    **NOTE** - Ensure this file has been added to your `.gitignore` to prevent it from being tracked
+
+3.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
+    cd my-barcadia-starter/
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+4.  **Import Content-model.json on Contentful**
+    Make a Json file(e.g. example-config.json) with the following content.
+
+    ```
+    {
+      "spaceId": "SPACE_ID",
+      "managementToken": "Generate a management token from the APIs Tab on contentful dashboard",
+      "contentFile": "content-model.json"
+     }
+    ```
+
+    Important Note: you need contentful globally installed(`npm i -g contentful-cli`) before the next step
+    Then Run this Command from your terminal:
+    `contentful space import --config example-config.json`
+
+5.  **Open your site**
 
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `my-barcadia-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+6.  **Build your site**
+
+    When you are ready to build your production site, you will need to create a `.env.production` file that will contain the `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` environment variables. After that is set up, you can run `npm run build` or `gatsby build` and Gatsby will build your site.
+
+## CMS Content Model
+
+    Follow the steps for importing data with Contentful [Here](https://www.contentful.com/developers/docs/tutorials/cli/import-and-export) using the example file `content-model.json`, found in the site root.
 
 ## 🧐 What's inside?
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+A quick look at the top-level files and directories
+.
+├── node_modules
+├── src
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── content-model.json
+├── gatsby-config.js
+├── gatsby-node.js
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
@@ -90,8 +118,15 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+#### Photo Credits
+
+[Ales Nesetril](https://unsplash.com/@alesnesetril)
+[Josh Rose](https://unsplash.com/@joshsrose)
+[Cat Han](https://unsplash.com/@figmentprints)
+[Martin Sanchez](https://unsplash.com/@martinsanchez)
+[Onur Binay](https://unsplash.com/@onurbinay)
+[Torsten Dettlaff](https://www.pexels.com/@tdcat)
+[Nick Demou](https://www.pexels.com/@nick-demou-365778)
+[Little John](https://unsplash.com/@joao_freire)

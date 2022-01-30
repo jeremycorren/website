@@ -1,20 +1,20 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import Contact from "../components/Contact/Contact"
 import Seo from "../components/Seo"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
-import About from "../components/BasicTextModule/About"
 
-const about = () => {
+const contact = () => {
   return (
     <>
-      <Seo title="About" />
+      <Seo title="Contact" />
       <Layout>
-        <SimpleBanner title="About">
+        <SimpleBanner title="Get in touch">
         </SimpleBanner>
-        <About /> 
+        <Contact />
       </Layout>
     </>
   )
 }
 
-export default about
+export default contact

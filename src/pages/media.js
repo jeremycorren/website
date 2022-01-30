@@ -1,20 +1,20 @@
 import * as React from "react"
 import Layout from "../components/Layout"
+import Media from "../components/BasicTextModule/Media"
 import Seo from "../components/Seo"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
-import About from "../components/BasicTextModule/About"
 
-const about = () => {
+const media = () => {
   return (
     <>
-      <Seo title="About" />
+      <Seo title="media" />
       <Layout>
-        <SimpleBanner title="About">
+        <SimpleBanner title="Media">
         </SimpleBanner>
-        <About /> 
+        <Media />
       </Layout>
     </>
   )
 }
 
-export default about
+export default media
